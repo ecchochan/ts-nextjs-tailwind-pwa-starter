@@ -35,7 +35,6 @@ const generateCsp = (): [csp: string, nonce: string] => {
     production ? "'unsafe-inline'" : "'unsafe-eval'"
   };`; // NextJS requires 'self' and 'unsafe-eval' in dev (faster source maps)
   csp += `font-src 'self' https://fonts.gstatic.com;`;
-  if (!production) csp += `connect-src 'self';`;
 
   return [csp, nonce];
 };
@@ -53,12 +52,18 @@ class MyDocument extends Document {
         <Head nonce={nonce}>
           <meta property='csp-nonce' content={nonce} />
           <meta httpEquiv='Content-Security-Policy' content={csp} />
+          {/* 
           <link
             rel='preload'
             href='/fonts/inter-var-latin.woff2'
             as='font'
             type='font/woff2'
             crossOrigin='anonymous'
+          />
+          */}
+          <link
+            href='https://fonts.googleapis.com/css2?family=Barlow&display=optional'
+            rel='stylesheet'
           />
           {/* enable analytics script only for production */}
           {isProduction && (
