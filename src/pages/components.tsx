@@ -345,10 +345,8 @@ const colorList = [
 ] as const;
 
 export function getStaticProps() {
-  return {
-    props: {
-      // returns the default 404 page with a status code of 404 in production
-      notFound: process.env.NODE_ENV === 'production',
-    },
-  };
+  if (process.env.NODE_ENV === 'production') {
+    return { notFound: true };
+  }
+  return {};
 }
