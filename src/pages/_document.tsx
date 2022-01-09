@@ -8,6 +8,8 @@ import Document, {
 } from 'next/document';
 import { v4 } from 'uuid';
 
+import GA from '@/components/GA';
+
 /**
  * Generate Content Security Policy for the app.
  * Uses randomly generated nonce (base64)
@@ -56,6 +58,7 @@ class MyDocument extends Document {
             crossOrigin='anonymous'
           />
         </Head>
+        <GA />
         <body>
           <Main />
           <NextScript nonce={nonce} />
