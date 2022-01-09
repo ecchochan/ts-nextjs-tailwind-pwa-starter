@@ -46,27 +46,19 @@
   }
 
   /* #region  /**=========== Typography =========== */
-  .h0 {
-    @apply font-primary text-3xl font-bold md:text-5xl;
-  }
-
-  h1,
-  .h1 {
+  h1 {
     @apply font-primary text-2xl font-bold md:text-4xl;
   }
 
-  h2,
-  .h2 {
+  h2 {
     @apply font-primary text-xl font-bold md:text-3xl;
   }
 
-  h3,
-  .h3 {
+  h3 {
     @apply font-primary text-lg font-bold md:text-2xl;
   }
 
-  h4,
-  .h4 {
+  h4 {
     @apply font-primary text-base font-bold md:text-lg;
   }
 
@@ -74,8 +66,7 @@
     background-image: none;
   }
 
-  body,
-  .p {
+  body {
     @apply font-primary text-sm md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
@@ -87,7 +78,7 @@
   }
 
   .bg-dark a.custom-link {
-    @apply / border-gray-200 hover:border-gray-200/0;
+    @apply border-gray-200 hover:border-gray-200/0;
   }
 
   /* Class to adjust with sticky footer */
