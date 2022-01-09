@@ -8,7 +8,9 @@ import Document, {
 } from 'next/document';
 import { v4 } from 'uuid';
 
-import GA from '@/components/GA';
+import { GA_TRACKING_ID } from '@/lib/gtag';
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 /**
  * Generate Content Security Policy for the app.
@@ -26,10 +28,11 @@ const generateCsp = (): [csp: string, nonce: string] => {
 
   let csp = ``;
   csp += `default-src 'self';`;
+  csp += `connect-src 'self' https://www.google-analytics.com;`;
   csp += `base-uri 'self';`;
   csp += `style-src 'self' https://fonts.googleapis.com 'unsafe-inline';`; // NextJS requires 'unsafe-inline'
   csp += `script-src 'nonce-${nonce}' 'self' ${
-    production ? 'unsafe-inline' : "'unsafe-eval'"
+    production ? "'unsafe-inline'" : "'unsafe-eval'"
   };`; // NextJS requires 'self' and 'unsafe-eval' in dev (faster source maps)
   csp += `font-src 'self' https://fonts.gstatic.com;`;
   if (!production) csp += `connect-src 'self';`;
@@ -57,8 +60,31 @@ class MyDocument extends Document {
             type='font/woff2'
             crossOrigin='anonymous'
           />
+          {/* enable analytics script only for production */}
+          {isProduction && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                nonce={nonce}
+              />
+              <script
+                nonce={nonce}
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{
+                  __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+                }}
+              />
+            </>
+          )}
         </Head>
-        <GA />
         <body>
           <Main />
           <NextScript nonce={nonce} />
