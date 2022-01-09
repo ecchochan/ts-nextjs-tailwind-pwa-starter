@@ -348,5 +348,7 @@ export function getStaticProps() {
   if (process.env.NODE_ENV === 'production') {
     return { notFound: true };
   }
-  return {};
+  return {
+    props: {},
+  };
 }
