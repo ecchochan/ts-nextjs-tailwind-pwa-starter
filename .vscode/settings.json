@@ -1,10 +1,18 @@
 {
   "css.validate": false,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": false
   },
-  "headwind.runOnSave": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.*",
+        "isAsync": false,
+        "cmd": "./node_modules/.bin/prettier -w ${file} && ./node_modules/.bin/eslint ${file} --fix"
+      }
+    ]
+  },
+  "headwind.runOnSave": false
 }
