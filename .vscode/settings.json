@@ -14,5 +14,6 @@
       }
     ]
   },
-  "headwind.runOnSave": false
+  "headwind.runOnSave": false,
+  "liveServer.settings.root": "./out"
 }
