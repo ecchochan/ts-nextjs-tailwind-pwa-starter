@@ -41,8 +41,10 @@ module.exports = withPWA({
     disable: process.env.NODE_ENV !== 'production',
   },
   assetPrefix: '.',
-  images: {
-    loader: 'imgix',
-    path: '/',
-  },
+  images: process.env.EXPORTING
+    ? {
+        loader: 'imgix',
+        path: '/',
+      }
+    : undefined,
 });
