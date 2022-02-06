@@ -1,10 +1,11 @@
 import * as React from 'react';
 
-import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
+
+import MainLayout from '@/layouts/MainLayout';
 
 /**
  * SVGR Support
@@ -21,7 +22,7 @@ import Vercel from '~/svg/Vercel.svg';
 
 export default function HomePage() {
   return (
-    <Layout>
+    <MainLayout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
@@ -55,6 +56,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-    </Layout>
+    </MainLayout>
   );
 }

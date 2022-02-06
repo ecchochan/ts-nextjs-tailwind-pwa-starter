@@ -8,8 +8,6 @@ import '@/styles/colors.css';
 
 import * as gtag from '@/lib/gtag';
 
-import Layout from '@/components/layout/Layout';
-
 const isProduction = process.env.NODE_ENV === 'production';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -27,9 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events]);
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <div suppressHydrationWarning>
+      {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+    </div>
   );
 }
 
