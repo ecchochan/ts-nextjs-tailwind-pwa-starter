@@ -40,7 +40,6 @@ module.exports = withPWA({
     skipWaiting: true,
     disable: process.env.NODE_ENV !== 'production',
   },
-  assetPrefix: '.',
   images: process.env.EXPORTING
     ? {
         loader: 'imgix',
