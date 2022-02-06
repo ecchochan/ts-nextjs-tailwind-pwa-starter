@@ -1,6 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withPWA = require('next-pwa');
 
+const SPA_PATH = '/app';
+
 /** @type {import('next').NextConfig} */
 module.exports = withPWA({
   eslint: {
@@ -15,6 +17,15 @@ module.exports = withPWA({
   //     'res.cloudinary.com',
   //   ],
   // },
+
+  async rewrites() {
+    return [
+      {
+        source: `/${SPA_PATH}/:any*`.replace(/\/+/g, '/'),
+        destination: SPA_PATH,
+      },
+    ];
+  },
 
   // SVGR
   webpack(config) {
