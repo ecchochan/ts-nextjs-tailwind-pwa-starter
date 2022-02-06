@@ -11,8 +11,8 @@ const links = [
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 bg-white'>
-      <Fade className='layout flex justify-between items-center h-8 lg:h-14'>
+    <header className='fixed top-0 z-50 w-full bg-white'>
+      <Fade className='layout flex justify-between items-center h-12 lg:h-14'>
         <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
           Home
         </UnstyledLink>
