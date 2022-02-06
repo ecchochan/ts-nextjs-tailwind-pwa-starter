@@ -5,6 +5,7 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
 
+import Fade from '@/animations/Fade';
 import MainLayout from '@/layouts/MainLayout';
 
 /**
@@ -28,7 +29,7 @@ export default function HomePage() {
 
       <main>
         <section className='bg-white'>
-          <div className='layout flex flex-col justify-center items-center min-h-screen text-center'>
+          <Fade className='layout flex flex-col justify-center items-center min-h-screen text-center'>
             <Vercel className='text-5xl' />
             <h1 className='mt-4'>
               Next.js + Tailwind CSS + TypeScript Starter
@@ -53,7 +54,7 @@ export default function HomePage() {
                 Theodorus Clarence
               </UnderlineLink>
             </footer>
-          </div>
+          </Fade>
         </section>
       </main>
     </MainLayout>
