@@ -113,3 +113,9 @@
     background-size: 0 2px, 100% 2px;
   }
 }
+
+@layer components {
+  .transition-simple {
+    @apply transition duration-200 ease-in-out;
+  }
+}
