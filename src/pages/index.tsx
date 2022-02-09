@@ -29,8 +29,8 @@ export default function HomePage() {
 
       <main>
         <section>
-          <Fade className='layout flex flex-col justify-center items-center min-h-screen text-center'>
-            <Vercel className='fill-slate-800 transition-simple text-5xl dark:fill-slate-100' />
+          <Fade className='layout flex min-h-screen flex-col items-center justify-center text-center'>
+            <Vercel className='transition-simple fill-slate-800 text-5xl dark:fill-slate-100' />
             <h1 className='mt-4'>
               Next.js + Tailwind CSS + TypeScript Starter
             </h1>

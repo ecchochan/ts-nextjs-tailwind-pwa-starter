@@ -1431,27 +1431,22 @@
     "@types/yargs" "^16.0.0"
     "chalk" "^4.0.0"
 
-"@next/env@12.0.9-canary.6":
-  "integrity" "sha512-7shiIMD7XSvJa4MulRQo0+n4va1qcj9KtWJD3ZVIBG1wc7WKzaF9PxLxQOT4MbKkYQfsdSPKZeUce2DShrrbNw=="
-  "resolved" "https://registry.npmjs.org/@next/env/-/env-12.0.9-canary.6.tgz"
-  "version" "12.0.9-canary.6"
+"@next/env@12.0.10":
+  "integrity" "sha512-mQVj0K6wQ5WEk/sL9SZ+mJXJUaG7el8CpZ6io1uFe9GgNTSC7EgUyNGqM6IQovIFc5ukF4O/hqsdh3S/DCgT2g=="
+  "resolved" "https://registry.npmjs.org/@next/env/-/env-12.0.10.tgz"
+  "version" "12.0.10"
 
-"@next/eslint-plugin-next@11.1.3":
-  "integrity" "sha512-hsQJUAyvxI8IUXEExhYi4py1MtOMydVdEgFhIdTTiHUI30bh3vGYH/ZuQ8njHJrE5WeVZ7YBlTX0muPOer1kOQ=="
-  "resolved" "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-11.1.3.tgz"
-  "version" "11.1.3"
+"@next/eslint-plugin-next@11.1.4":
+  "integrity" "sha512-E0iM++lWF2uOEBSRWSIg9sl3xXWvYSGP6tvUVKdeNNIiEAWwcZzs0OqxeO7Xq3BZ5XkQREEGiAUkzfCqDze5TQ=="
+  "resolved" "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-11.1.4.tgz"
+  "version" "11.1.4"
   dependencies:
     "glob" "7.1.7"
 
-"@next/swc-darwin-arm64@12.0.9-canary.6":
-  "integrity" "sha512-KBP5qKeQQ82dRAjQ4BqTwi0z5a4a6emjJtddJoJ+rwvABsGChDgyAanTXXs+msjC59EEuYdQhu5F0weI129w3w=="
-  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-12.0.9-canary.6.tgz"
-  "version" "12.0.9-canary.6"
-
-"@next/swc-darwin-x64@12.0.9-canary.6":
-  "integrity" "sha512-aJf/O/wCRQ9WfYmMDjvGKcxhPRcXrwESzVQtMn8DeiKGudJI9cjngSwWuGGXjDjY1jH9Yy2Aavb8H0gPnA4bgw=="
-  "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-12.0.9-canary.6.tgz"
-  "version" "12.0.9-canary.6"
+"@next/swc-darwin-x64@12.0.10":
+  "integrity" "sha512-Qykcu/gVC5oTvOQoRBhyuS5GYm5SbcgrFTsaLFkGBmEkg9eMQRiaCswk4IafpDXVzITkVFurzSM28q3tLW2qUw=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-12.0.10.tgz"
+  "version" "12.0.10"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
@@ -1594,31 +1589,31 @@
     "@svgr/babel-plugin-transform-react-native-svg" "^6.0.0"
     "@svgr/babel-plugin-transform-svg-component" "^6.2.0"
 
-"@svgr/core@^6.0.0", "@svgr/core@^6.2.0":
-  "integrity" "sha512-n5PrYAPoTpWGykqa8U05/TVTHOrVR/TxrUJ5EWHP9Db6vR3qnqzwAVLiFT1+slA7zQoJTXafQb+akwThf9SxGw=="
-  "resolved" "https://registry.npmjs.org/@svgr/core/-/core-6.2.0.tgz"
-  "version" "6.2.0"
+"@svgr/core@^6.0.0", "@svgr/core@^6.2.1":
+  "integrity" "sha512-NWufjGI2WUyrg46mKuySfviEJ6IxHUOm/8a3Ph38VCWSp+83HBraCQrpEM3F3dB6LBs5x8OElS8h3C0oOJaJAA=="
+  "resolved" "https://registry.npmjs.org/@svgr/core/-/core-6.2.1.tgz"
+  "version" "6.2.1"
   dependencies:
-    "@svgr/plugin-jsx" "^6.2.0"
+    "@svgr/plugin-jsx" "^6.2.1"
     "camelcase" "^6.2.0"
     "cosmiconfig" "^7.0.1"
 
-"@svgr/hast-util-to-babel-ast@^6.0.0":
-  "integrity" "sha512-S+TxtCdDyRGafH1VG1t/uPZ87aOYOHzWL8kqz4FoSZcIbzWA6rnOmjNViNiDzqmEpzp2PW5o5mZfvC9DiVZhTQ=="
-  "resolved" "https://registry.npmjs.org/@svgr/hast-util-to-babel-ast/-/hast-util-to-babel-ast-6.0.0.tgz"
-  "version" "6.0.0"
+"@svgr/hast-util-to-babel-ast@^6.2.1":
+  "integrity" "sha512-pt7MMkQFDlWJVy9ULJ1h+hZBDGFfSCwlBNW1HkLnVi7jUhyEXUaGYWi1x6bM2IXuAR9l265khBT4Av4lPmaNLQ=="
+  "resolved" "https://registry.npmjs.org/@svgr/hast-util-to-babel-ast/-/hast-util-to-babel-ast-6.2.1.tgz"
+  "version" "6.2.1"
   dependencies:
     "@babel/types" "^7.15.6"
     "entities" "^3.0.1"
 
-"@svgr/plugin-jsx@^6.2.0":
-  "integrity" "sha512-QJDEe7K5Hkd4Eewu4pcjiOKTCtjB47Ol6lDLXVhf+jEewi+EKJAaAmM+bNixfW6LSNEg8RwOYQN3GZcprqKfHw=="
-  "resolved" "https://registry.npmjs.org/@svgr/plugin-jsx/-/plugin-jsx-6.2.0.tgz"
-  "version" "6.2.0"
+"@svgr/plugin-jsx@^6.2.1":
+  "integrity" "sha512-u+MpjTsLaKo6r3pHeeSVsh9hmGRag2L7VzApWIaS8imNguqoUwDq/u6U/NDmYs/KAsrmtBjOEaAAPbwNGXXp1g=="
+  "resolved" "https://registry.npmjs.org/@svgr/plugin-jsx/-/plugin-jsx-6.2.1.tgz"
+  "version" "6.2.1"
   dependencies:
     "@babel/core" "^7.15.5"
     "@svgr/babel-preset" "^6.2.0"
-    "@svgr/hast-util-to-babel-ast" "^6.0.0"
+    "@svgr/hast-util-to-babel-ast" "^6.2.1"
     "svg-parser" "^2.0.2"
 
 "@svgr/plugin-svgo@^6.2.0":
@@ -1630,18 +1625,18 @@
     "deepmerge" "^4.2.2"
     "svgo" "^2.5.0"
 
-"@svgr/webpack@^6.2.0":
-  "integrity" "sha512-KlLdGe93A8GDs19g8kjEmHwArgMAP6cUfegr2Nx+yDAYY32IPtjzm3SoqNP+I+cnOF1CToJu1clWTPEmdd8dXg=="
-  "resolved" "https://registry.npmjs.org/@svgr/webpack/-/webpack-6.2.0.tgz"
-  "version" "6.2.0"
+"@svgr/webpack@^6.2.1":
+  "integrity" "sha512-h09ngMNd13hnePwgXa+Y5CgOjzlCvfWLHg+MBnydEedAnuLRzUHUJmGS3o2OsrhxTOOqEsPOFt5v/f6C5Qulcw=="
+  "resolved" "https://registry.npmjs.org/@svgr/webpack/-/webpack-6.2.1.tgz"
+  "version" "6.2.1"
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/plugin-transform-react-constant-elements" "^7.14.5"
     "@babel/preset-env" "^7.15.6"
     "@babel/preset-react" "^7.14.5"
     "@babel/preset-typescript" "^7.15.0"
-    "@svgr/core" "^6.2.0"
-    "@svgr/plugin-jsx" "^6.2.0"
+    "@svgr/core" "^6.2.1"
+    "@svgr/plugin-jsx" "^6.2.1"
     "@svgr/plugin-svgo" "^6.2.0"
 
 "@swc/cli@^0.1.55":
@@ -1699,10 +1694,10 @@
     "lz-string" "^1.4.4"
     "pretty-format" "^27.0.2"
 
-"@testing-library/jest-dom@^5.16.1":
-  "integrity" "sha512-ajUJdfDIuTCadB79ukO+0l8O+QwN0LiSxDaYUTI4LndbbUsGi6rWU1SCexXzBA2NSjlVB9/vbkasQIL3tmPBjw=="
-  "resolved" "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.16.1.tgz"
-  "version" "5.16.1"
+"@testing-library/jest-dom@^5.16.2":
+  "integrity" "sha512-6ewxs1MXWwsBFZXIk4nKKskWANelkdUehchEOokHsN8X7c2eKXGw+77aRV63UU8f/DTSVUPLaGxdrj4lN7D/ug=="
+  "resolved" "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.16.2.tgz"
+  "version" "5.16.2"
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
@@ -1867,10 +1862,10 @@
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.4.tgz"
   "version" "15.7.4"
 
-"@types/react@^17.0.38":
-  "integrity" "sha512-SI92X1IA+FMnP3qM5m4QReluXzhcmovhZnLNm3pyeQlooi02qI7sLiepEYqT678uNiyc25XfCqxREFpy3W7YhQ=="
-  "resolved" "https://registry.npmjs.org/@types/react/-/react-17.0.38.tgz"
-  "version" "17.0.38"
+"@types/react@^17.0.39":
+  "integrity" "sha512-UVavlfAxDd/AgAacMa60Azl7ygyQNRwC/DsHZmKgNvPmRR5p70AJ5Q9EAmL2NWOJmeV+vVUI4IAP7GZrN8h8Ug=="
+  "resolved" "https://registry.npmjs.org/@types/react/-/react-17.0.39.tgz"
+  "version" "17.0.39"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -2555,7 +2550,7 @@
   "resolved" "https://registry.npmjs.org/char-regex/-/char-regex-1.0.2.tgz"
   "version" "1.0.2"
 
-"chokidar@^3.5.1", "chokidar@^3.5.2", "chokidar@>=3.0.0 <4.0.0":
+"chokidar@^3.5.1", "chokidar@^3.5.3", "chokidar@>=3.0.0 <4.0.0":
   "integrity" "sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw=="
   "resolved" "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz"
   "version" "3.5.3"
@@ -3424,12 +3419,12 @@
   optionalDependencies:
     "source-map" "~0.6.1"
 
-"eslint-config-next@^11.1.3":
-  "integrity" "sha512-j9y/ZG2u+8od/kIz7X8uQ7F/Y8fKp/P/WqLi8SOLXJn2VqJ79IB4J1a6MOXPZF9sUeEnwuRHS8+1u5bIBeSxKw=="
-  "resolved" "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-11.1.3.tgz"
-  "version" "11.1.3"
+"eslint-config-next@^11.1.4":
+  "integrity" "sha512-PD2/sxnLcI1Zy/QwKSwugzgafwymNh70Y/nPB/v+i0GOTFIl2JpLRUg9m/bQFHzi6PDeDM81w89ayFvpa2/Nxg=="
+  "resolved" "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-11.1.4.tgz"
+  "version" "11.1.4"
   dependencies:
-    "@next/eslint-plugin-next" "11.1.3"
+    "@next/eslint-plugin-next" "11.1.4"
     "@rushstack/eslint-patch" "^1.0.6"
     "@typescript-eslint/parser" "^4.20.0"
     "eslint-import-resolver-node" "^0.3.4"
@@ -3730,21 +3725,10 @@
   "resolved" "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
   "version" "3.1.3"
 
-"fast-glob@^3.1.1", "fast-glob@^3.2.5", "fast-glob@^3.2.7":
-  "integrity" "sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q=="
-  "resolved" "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.7.tgz"
-  "version" "3.2.7"
-  dependencies:
-    "@nodelib/fs.stat" "^2.0.2"
-    "@nodelib/fs.walk" "^1.2.3"
-    "glob-parent" "^5.1.2"
-    "merge2" "^1.3.0"
-    "micromatch" "^4.0.4"
-
-"fast-glob@^3.2.9":
-  "integrity" "sha512-MBwILhhD92sziIrMQwpqcuGERF+BH99ei2a3XsGJuqEKcSycAL+w0HWokFenZXona+kjFr82Lf71eTxNRC06XQ=="
-  "resolved" "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.9.tgz"
-  "version" "3.2.9"
+"fast-glob@^3.1.1", "fast-glob@^3.2.11", "fast-glob@^3.2.5", "fast-glob@^3.2.9":
+  "integrity" "sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew=="
+  "resolved" "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.11.tgz"
+  "version" "3.2.11"
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
     "@nodelib/fs.walk" "^1.2.3"
@@ -5571,7 +5555,7 @@
   "resolved" "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   "version" "2.1.2"
 
-"nanoid@^3.1.30":
+"nanoid@^3.1.30", "nanoid@^3.2.0":
   "integrity" "sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA=="
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.2.0.tgz"
   "version" "3.2.0"
@@ -5606,28 +5590,28 @@
     "@corex/deepmerge" "^2.6.148"
     "minimist" "^1.2.5"
 
-"next@*", "next@^12.0.9-canary.6", "next@>=10.2.0", "next@>=9.0.0":
-  "integrity" "sha512-SMEkDzKwX5iR61fhwtpfrun7PtHbs5/ify/iegbHq7+5om1D6rynbMirEEDXFq2IZFizOGA41N4d26AXoAa+5w=="
-  "resolved" "https://registry.npmjs.org/next/-/next-12.0.9-canary.6.tgz"
-  "version" "12.0.9-canary.6"
+"next@*", "next@^12.0.10", "next@>=10.2.0", "next@>=9.0.0":
+  "integrity" "sha512-1y3PpGzpb/EZzz1jgne+JfZXKAVJUjYXwxzrADf/LWN+8yi9o79vMLXpW3mevvCHkEF2sBnIdjzNn16TJrINUw=="
+  "resolved" "https://registry.npmjs.org/next/-/next-12.0.10.tgz"
+  "version" "12.0.10"
   dependencies:
-    "@next/env" "12.0.9-canary.6"
+    "@next/env" "12.0.10"
     "caniuse-lite" "^1.0.30001283"
     "postcss" "8.4.5"
     "styled-jsx" "5.0.0"
     "use-subscription" "1.5.1"
   optionalDependencies:
-    "@next/swc-android-arm64" "12.0.9-canary.6"
-    "@next/swc-darwin-arm64" "12.0.9-canary.6"
-    "@next/swc-darwin-x64" "12.0.9-canary.6"
-    "@next/swc-linux-arm-gnueabihf" "12.0.9-canary.6"
-    "@next/swc-linux-arm64-gnu" "12.0.9-canary.6"
-    "@next/swc-linux-arm64-musl" "12.0.9-canary.6"
-    "@next/swc-linux-x64-gnu" "12.0.9-canary.6"
-    "@next/swc-linux-x64-musl" "12.0.9-canary.6"
-    "@next/swc-win32-arm64-msvc" "12.0.9-canary.6"
-    "@next/swc-win32-ia32-msvc" "12.0.9-canary.6"
-    "@next/swc-win32-x64-msvc" "12.0.9-canary.6"
+    "@next/swc-android-arm64" "12.0.10"
+    "@next/swc-darwin-arm64" "12.0.10"
+    "@next/swc-darwin-x64" "12.0.10"
+    "@next/swc-linux-arm-gnueabihf" "12.0.10"
+    "@next/swc-linux-arm64-gnu" "12.0.10"
+    "@next/swc-linux-arm64-musl" "12.0.10"
+    "@next/swc-linux-x64-gnu" "12.0.10"
+    "@next/swc-linux-x64-musl" "12.0.10"
+    "@next/swc-win32-arm64-msvc" "12.0.10"
+    "@next/swc-win32-ia32-msvc" "12.0.10"
+    "@next/swc-win32-x64-msvc" "12.0.10"
 
 "node-int64@^0.4.0":
   "integrity" "sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs="
@@ -6050,7 +6034,7 @@
   dependencies:
     "postcss-selector-parser" "^6.0.6"
 
-"postcss-selector-parser@^6.0.6", "postcss-selector-parser@^6.0.8":
+"postcss-selector-parser@^6.0.6", "postcss-selector-parser@^6.0.9":
   "integrity" "sha512-UO3SgnZOVTwu4kyLR22UQ1xZh086RyNZppb7lLAKBFK8a32ttG5i87Y/P3+2bRSjZNyJ1B7hfFNo273tKe9YxQ=="
   "resolved" "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.0.9.tgz"
   "version" "6.0.9"
@@ -6063,7 +6047,16 @@
   "resolved" "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   "version" "4.2.0"
 
-"postcss@^8.0.9", "postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.5", "postcss@8.4.5":
+"postcss@^8.0.9", "postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.6":
+  "integrity" "sha512-OovjwIzs9Te46vlEx7+uXB0PLijpwjXGKXjVGGPIGubGpq7uh5Xgf6D6FiJ/SzJMBosHDp6a2hiXOS97iBXcaA=="
+  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.6.tgz"
+  "version" "8.4.6"
+  dependencies:
+    "nanoid" "^3.2.0"
+    "picocolors" "^1.0.0"
+    "source-map-js" "^1.0.2"
+
+"postcss@8.4.5":
   "integrity" "sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.5.tgz"
   "version" "8.4.5"
@@ -6082,12 +6075,12 @@
   "resolved" "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.1.2.tgz"
   "version" "1.1.2"
 
-"prettier-plugin-sort-class-names@^3.0.1":
-  "integrity" "sha512-fJ22RqVrSAfWbY9+VZSbs6Th1Ww98uPC7zYMbo13W4mz/Sn69hERaGBX6/wIvB6QtRjBBnualQmgue5zjpfxJg=="
-  "resolved" "https://registry.npmjs.org/prettier-plugin-sort-class-names/-/prettier-plugin-sort-class-names-3.0.1.tgz"
-  "version" "3.0.1"
+"prettier-plugin-tailwindcss@^0.1.5":
+  "integrity" "sha512-tmBr45hCLuit2Cz9Pwow0/Jl1bGivYGsfcF29O+3sKcE++ybjz9dfie565S3ZsvAeV8uYer9SRMBWDsHPly2Lg=="
+  "resolved" "https://registry.npmjs.org/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.7.tgz"
+  "version" "0.1.7"
 
-"prettier@^2.5.1", "prettier@2.x":
+"prettier@^2.5.1", "prettier@>=2.2.0":
   "integrity" "sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg=="
   "resolved" "https://registry.npmjs.org/prettier/-/prettier-2.5.1.tgz"
   "version" "2.5.1"
@@ -6408,7 +6401,7 @@
   "resolved" "https://registry.npmjs.org/resolve.exports/-/resolve.exports-1.1.0.tgz"
   "version" "1.1.0"
 
-"resolve@^1.10.0", "resolve@^1.13.1", "resolve@^1.14.2", "resolve@^1.17.0", "resolve@^1.19.0", "resolve@^1.20.0", "resolve@^1.21.0":
+"resolve@^1.10.0", "resolve@^1.13.1", "resolve@^1.14.2", "resolve@^1.17.0", "resolve@^1.19.0", "resolve@^1.20.0", "resolve@^1.22.0":
   "integrity" "sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw=="
   "resolved" "https://registry.npmjs.org/resolve/-/resolve-1.22.0.tgz"
   "version" "1.22.0"
@@ -6680,10 +6673,10 @@
   "resolved" "https://registry.npmjs.org/source-list-map/-/source-list-map-2.0.1.tgz"
   "version" "2.0.1"
 
-"source-map-js@^1.0.1", "source-map-js@>=0.6.2 <2.0.0":
-  "integrity" "sha512-4+TN2b3tqOCd/kaGRJ/sTYA0tR0mdXx26ipdolxcwtJVqEnqNYvlCAt1q3ypy4QMlYus+Zh34RNtYLoq2oQ4IA=="
-  "resolved" "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.1.tgz"
-  "version" "1.0.1"
+"source-map-js@^1.0.1", "source-map-js@^1.0.2", "source-map-js@>=0.6.2 <2.0.0":
+  "integrity" "sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw=="
+  "resolved" "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
+  "version" "1.0.2"
 
 "source-map-resolve@^0.6.0":
   "integrity" "sha512-KXBr9d/fO/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnKC+EwzvJZIP/qkuMgR/w=="
@@ -7053,20 +7046,20 @@
   dependencies:
     "hashlru" "^2.3.0"
 
-"tailwindcss@^3.0.15", "tailwindcss@>=3.0.0 || >= 3.0.0-alpha.1":
-  "integrity" "sha512-bT2iy7FtjwgsXik4ZoJnHXR+SRCiGR1W95fVqpLZebr64m4ahwUwRbIAc5w5+2fzr1YF4Ct2eI7dojMRRl8sVQ=="
-  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.0.15.tgz"
-  "version" "3.0.15"
+"tailwindcss@^3.0.18", "tailwindcss@>=3.0.0 || >= 3.0.0-alpha.1":
+  "integrity" "sha512-rjsdfz/qZya5xQ0OVynEMETgWq1CacmftgMYeXXh6bRM5vxsNwRSbMJsCCIjq/w67om9VP/AFMolOwiE+5VKig=="
+  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.0.19.tgz"
+  "version" "3.0.19"
   dependencies:
     "arg" "^5.0.1"
     "chalk" "^4.1.2"
-    "chokidar" "^3.5.2"
+    "chokidar" "^3.5.3"
     "color-name" "^1.1.4"
     "cosmiconfig" "^7.0.1"
     "detective" "^5.2.0"
     "didyoumean" "^1.2.2"
     "dlv" "^1.1.3"
-    "fast-glob" "^3.2.7"
+    "fast-glob" "^3.2.11"
     "glob-parent" "^6.0.2"
     "is-glob" "^4.0.3"
     "normalize-path" "^3.0.0"
@@ -7074,10 +7067,10 @@
     "postcss-js" "^4.0.0"
     "postcss-load-config" "^3.1.0"
     "postcss-nested" "5.0.6"
-    "postcss-selector-parser" "^6.0.8"
+    "postcss-selector-parser" "^6.0.9"
     "postcss-value-parser" "^4.2.0"
     "quick-lru" "^5.1.1"
-    "resolve" "^1.21.0"
+    "resolve" "^1.22.0"
 
 "temp-dir@^2.0.0":
   "integrity" "sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg=="
