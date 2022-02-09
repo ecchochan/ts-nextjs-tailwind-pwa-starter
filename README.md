@@ -24,6 +24,9 @@ This repository is 🔋 battery packed with:
 - 📈 GA Support
 - ✨ TypeScript
 - 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
+- 🌚 Dark Mode Enabled
+- 🏃 Motion Framer Installed
+- 🚏 React Router for Hybrid SPA ([reference](https://colinhacks.com/essays/building-a-spa-with-nextjs))
 - 💎 Pre-built Components — Components that will **automatically adapt** with your brand color, [check here for the demo](https://tsnext-tw.thcl.dev/components)
 - 🃏 Jest — Configured for unit testing
 - 📥 Absolute Import and Path Alias — Import components using `@/` prefix
