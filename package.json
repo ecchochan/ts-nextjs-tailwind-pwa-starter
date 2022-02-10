@@ -21,6 +21,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@linaria/core": "^3.0.0-beta.15",
+    "@linaria/react": "^3.0.0-beta.15",
     "clsx": "^1.1.1",
     "crypto": "^1.0.1",
     "framer-motion": "^6.2.4",
@@ -38,6 +40,9 @@
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
+    "@linaria/babel-preset": "^3.0.0-beta.15",
+    "@linaria/shaker": "^3.0.0-beta.15",
+    "@linaria/webpack-loader": "^3.0.0-beta.16",
     "@svgr/webpack": "^6.2.1",
     "@swc/cli": "^0.1.55",
     "@swc/core": "^1.2.136",
@@ -61,6 +66,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.7",
     "lint-staged": "^11.2.6",
+    "next-linaria": "^1.0.1-beta",
     "next-sitemap": "^1.9.12",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",

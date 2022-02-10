@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import * as React from 'react';
 
 import ArrowLink from '@/components/links/ArrowLink';
@@ -17,9 +18,9 @@ import MainLayout from '@/layouts/MainLayout';
  */
 import Vercel from '~/svg/Vercel.svg';
 
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
+const upper = css`
+  text-transform: uppercase;
+`;
 
 export default function HomePage() {
   return (
@@ -28,7 +29,7 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section>
+        <section className={upper}>
           <Fade className='layout flex min-h-screen flex-col items-center justify-center text-center'>
             <Vercel className='transition-simple fill-slate-800 text-5xl dark:fill-slate-100' />
             <h1 className='mt-4'>
