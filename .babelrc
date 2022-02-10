@@ -1,4 +1,4 @@
 {
   "presets": ["next/babel", "@linaria"],
-  "plugins": []
+  "plugins": ["babel-plugin-twin", "babel-plugin-macros"]
 }

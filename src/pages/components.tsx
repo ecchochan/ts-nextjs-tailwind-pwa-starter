@@ -12,6 +12,7 @@ import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 
 import MainLayout from '@/layouts/MainLayout';
+import layout from '@/styles/layout';
 
 type Color = typeof colorList[number];
 
@@ -37,7 +38,8 @@ export default function ComponentsPage() {
         >
           <div
             className={clsx(
-              'layout min-h-screen py-20',
+              layout,
+              'min-h-screen py-20',
               mode === 'dark' ? 'text-white' : 'text-black'
             )}
           >

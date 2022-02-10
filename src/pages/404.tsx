@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { RiAlarmWarningFill } from 'react-icons/ri';
 
+import clsxm from '@/lib/clsxm';
+
 import ArrowLink from '@/components/links/ArrowLink';
 import Seo from '@/components/Seo';
 
 import MainLayout from '@/layouts/MainLayout';
+import layout from '@/styles/layout';
 
 export default function NotFoundPage() {
   return (
@@ -13,7 +16,12 @@ export default function NotFoundPage() {
 
       <main>
         <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
+          <div
+            className={clsxm(
+              layout,
+              'flex min-h-screen flex-col items-center justify-center text-center text-black'
+            )}
+          >
             <RiAlarmWarningFill
               size={60}
               className='drop-shadow-glow animate-flicker text-red-500'

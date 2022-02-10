@@ -1,5 +1,8 @@
 import { css } from '@linaria/core';
 import * as React from 'react';
+import tw from 'twin.macro';
+
+import clsxm from '@/lib/clsxm';
 
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
@@ -8,6 +11,7 @@ import Seo from '@/components/Seo';
 
 import Fade from '@/animations/Fade';
 import MainLayout from '@/layouts/MainLayout';
+import layout from '@/styles/layout';
 
 /**
  * SVGR Support
@@ -18,8 +22,8 @@ import MainLayout from '@/layouts/MainLayout';
  */
 import Vercel from '~/svg/Vercel.svg';
 
-const upper = css`
-  text-transform: uppercase;
+const wrapper = css`
+  ${tw`flex min-h-screen flex-col items-center justify-center text-center`}
 `;
 
 export default function HomePage() {
@@ -29,8 +33,8 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section className={upper}>
-          <Fade className='layout flex min-h-screen flex-col items-center justify-center text-center'>
+        <section>
+          <Fade.div className={clsxm(layout, wrapper)}>
             <Vercel className='transition-simple fill-slate-800 text-5xl dark:fill-slate-100' />
             <h1 className='mt-4'>
               Next.js + Tailwind CSS + TypeScript Starter
@@ -55,7 +59,7 @@ export default function HomePage() {
                 Theodorus Clarence
               </UnderlineLink>
             </footer>
-          </Fade>
+          </Fade.div>
         </section>
       </main>
     </MainLayout>
