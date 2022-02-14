@@ -1,4 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('@jest/types').Config.InitialOptions} */
+
+require('dotenv').config({
+  path: '.env.local',
+});
+
 module.exports = {
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
