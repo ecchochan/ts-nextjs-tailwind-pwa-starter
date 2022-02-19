@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "(cp -n .env.local.example .env.local || true) && node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
     "dev": "next dev",
     "build": "next build",
     "export": "next build && EXPORTING=true next export",
