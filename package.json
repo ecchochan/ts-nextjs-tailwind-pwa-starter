@@ -40,7 +40,8 @@
     "sass-rem": "^3.0.0",
     "tailwind-merge": "^1.2.0",
     "twin.macro": "^2.8.2",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "zustand": "^3.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
