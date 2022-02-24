@@ -90,7 +90,7 @@ class MyDocument extends Document {
             </>
           )}
         </Head>
-        <body className='transition-simple text-gray-800 bg-white dark:bg-dark dark:text-gray-100'>
+        <body className='transition-simple bg-white text-gray-800 dark:bg-dark dark:text-gray-100'>
           <Main />
           <NextScript nonce={nonce} />
         </body>
