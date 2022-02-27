@@ -10,6 +10,7 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
+import Skeleton from '@/components/Skeleton';
 
 import MainLayout from '@/layouts/MainLayout';
 import layout from '@/styles/layout';
@@ -299,13 +300,19 @@ export default function ComponentsPage() {
                   Next Image with default props and skeleton animation
                 </p>
                 <NextImage
-                  useSkeleton
-                  className='w-32 md:w-40'
+                  className='mt-8'
                   src='/favicon/apple-icon-180x180.png'
                   width='180'
                   height='180'
                   alt='Icon'
                 />
+              </li>
+              <li className='space-y-2'>
+                <h2 className='text-lg md:text-xl'>Skeleton</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Skeleton with shimmer effect
+                </p>
+                <Skeleton className='h-72 w-72' />
               </li>
             </ol>
           </div>
