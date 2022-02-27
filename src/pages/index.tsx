@@ -1,6 +1,4 @@
-import { css } from '@linaria/core';
 import * as React from 'react';
-import tw from 'twin.macro';
 
 import clsxm from '@/lib/clsxm';
 
@@ -9,8 +7,11 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
 
+import { useHeader } from '@/store/app';
+
 import Fade from '@/animations/Fade';
 import MainLayout from '@/layouts/MainLayout';
+import center from '@/styles/center';
 import layout from '@/styles/layout';
 
 /**
@@ -22,11 +23,9 @@ import layout from '@/styles/layout';
  */
 import Vercel from '~/svg/Vercel.svg';
 
-const wrapper = css`
-  ${tw`flex min-h-screen flex-col items-center justify-center text-center`}
-`;
-
 export default function HomePage() {
+  useHeader();
+
   return (
     <MainLayout>
       {/* <Seo templateTitle='Home' /> */}
@@ -34,7 +33,7 @@ export default function HomePage() {
 
       <main>
         <section>
-          <Fade.div className={clsxm(layout, wrapper)}>
+          <Fade.div className={clsxm(layout, center)}>
             <Vercel className='transition-simple fill-slate-800 text-5xl dark:fill-slate-100' />
             <h1 className='mt-4'>
               Next.js + Tailwind CSS + TypeScript Starter

@@ -6,22 +6,22 @@ import clsxm from '@/lib/clsxm';
 import ArrowLink from '@/components/links/ArrowLink';
 import Seo from '@/components/Seo';
 
+import { useHeader } from '@/store/app';
+
 import MainLayout from '@/layouts/MainLayout';
+import center from '@/styles/center';
 import layout from '@/styles/layout';
 
 export default function NotFoundPage() {
+  useHeader();
+
   return (
     <MainLayout>
       <Seo templateTitle='Not Found' />
 
       <main>
         <section className='bg-white'>
-          <div
-            className={clsxm(
-              layout,
-              'flex min-h-screen flex-col items-center justify-center text-center text-black'
-            )}
-          >
+          <div className={clsxm(layout, center, 'text-black')}>
             <RiAlarmWarningFill
               size={60}
               className='drop-shadow-glow animate-flicker text-red-500'

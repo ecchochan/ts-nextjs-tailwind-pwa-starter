@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Header from './Header';
+import Fade from '@/animations/Fade';
 
 export default function MainLayout({
   children,
@@ -10,8 +10,7 @@ export default function MainLayout({
   // Put Header or Footer Here
   return (
     <div>
-      <Header />
-      {children}
+      <Fade.div>{children}</Fade.div>
     </div>
   );
 }

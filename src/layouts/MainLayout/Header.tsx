@@ -9,8 +9,8 @@ import Fade from '@/animations/Fade';
 import layout from '@/styles/layout';
 
 const links = [
-  { href: '/', label: 'Route 1' },
-  { href: '/', label: 'Route 2' },
+  { href: '/', label: 'Home' },
+  { href: '/contact-us', label: 'Contact Us' },
 ];
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
         )}
       >
         <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
-          Home
+          Logo
         </UnstyledLink>
         <nav>
           <ul className='flex items-center justify-between space-x-4'>
