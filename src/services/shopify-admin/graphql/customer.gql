@@ -1,0 +1,57 @@
+fragment Customer on Customer {
+  id
+  firstName
+  lastName
+  displayName
+  email
+  phone
+  tags
+  acceptsMarketing
+  updatedAt
+  createdAt
+  metafields(first: 10) {
+    edges {
+      node {
+        value
+        key
+      }
+    }
+  }
+}
+
+mutation customerCreate($input: CustomerInput!) {
+  customerCreate(input: $input) {
+    customer {
+      id
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+mutation customerUpdate($input: CustomerInput!) {
+  customerUpdate(input: $input) {
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+query customerSearch($query: String!) {
+  customers(first: 10, query: $query) {
+    edges {
+      node {
+        ...Customer
+      }
+    }
+  }
+}
+
+query customerGet($id: ID!) {
+  customer(id: $id) {
+    ...Customer
+  }
+}

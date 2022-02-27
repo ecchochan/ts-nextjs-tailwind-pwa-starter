@@ -49,6 +49,23 @@ You can also check all of the **details and demos** on my blog post:
 
 - [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
 
+## TODO
+
+- Contact Us - https://prateeksurana.me/blog/integrating-recaptcha-with-next/
+
+  ```bash
+   # https://www.google.com/u/1/recaptcha/admin/create
+   NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
+   RECAPTCHA_SECRET_KEY=
+  ```
+
+  - [ ] API
+  - [ ] Form
+
+- Subscribe Button
+  - [x] API
+  - [ ] Button
+
 ## Getting Started
 
 ### 1. Clone this template using one of the three ways:

@@ -1,0 +1,11 @@
+query metafieldDefinitions($ownerType: MetafieldOwnerType!) {
+  metafieldDefinitions(ownerType: $ownerType, first: 100) {
+    edges {
+      node {
+        name
+        ownerType
+        key
+      }
+    }
+  }
+}

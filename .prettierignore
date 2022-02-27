@@ -13,6 +13,10 @@
 /.next/
 /out/
 
+# graphql 
+src/services/shopify/generator/generated.ts
+src/services/shopify-admin/generator/generated.ts
+
 # production
 /build
 

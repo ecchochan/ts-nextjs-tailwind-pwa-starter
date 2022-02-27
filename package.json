@@ -21,7 +21,10 @@
     "postbuild": "next-sitemap",
     "prepare": "husky install",
     "storybook": "BROWSER=none start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "graphql": "yarn graphql:download && yarn graphql:codegen",
+    "graphql:download": "apollo client:download-schema -c src/services/shopify/generator/apollo.config.js src/services/shopify/generator/schema.gql && apollo client:download-schema -c src/services/shopify-admin/generator/apollo.config.js src/services/shopify-admin/generator/schema.gql",
+    "graphql:codegen": "graphql-codegen -r dotenv/config -c src/services/shopify/generator/codegen.config.js && graphql-codegen -r dotenv/config -c src/services/shopify-admin/generator/codegen.config.js"
   },
   "dependencies": {
     "@linaria/core": "^3.0.0-beta.15",
@@ -30,8 +33,12 @@
     "crypto": "^1.0.1",
     "dotenv": "^16.0.0",
     "framer-motion": "^6.2.4",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.0.0",
+    "graphql-tag": "^2.12.6",
     "next": "^12.1.0",
     "next-pwa": "^5.4.4",
+    "nookies": "^2.5.2",
     "pino": "^7.8.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -48,6 +55,10 @@
     "@babel/core": "^7.17.2",
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
+    "@graphql-codegen/cli": "^2.6.1",
+    "@graphql-codegen/typescript": "^2.4.3",
+    "@graphql-codegen/typescript-graphql-request": "^4.3.5",
+    "@graphql-codegen/typescript-operations": "^2.3.0",
     "@linaria/babel-preset": "^3.0.0-beta.15",
     "@linaria/shaker": "^3.0.0-beta.15",
     "@linaria/webpack-loader": "^3.0.0-beta.16",
@@ -70,6 +81,7 @@
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
+    "apollo": "^2.33.9",
     "autoprefixer": "^10.4.2",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.3",
@@ -96,11 +108,12 @@
     "storybook-addon-next": "^1.4.2",
     "storybook-addon-sass-postcss": "^0.1.0",
     "tailwindcss": "^3.0.23",
+    "type-fest": "^2.11.2",
     "typescript": "^4.5.5"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,}": [
-      "eslint --max-warnings=0",
+    "src/!(services/*/generator/*)**/*.{js,jsx,ts,tsx,}": [
+      "eslint --max-warnings=0 --ignore-path '.prettierignore'",
       "prettier -w"
     ],
     "src/**/*.{json,css,scss,md}": [
@@ -108,6 +121,7 @@
     ]
   },
   "resolutions": {
-    "webpack": "^5"
+    "webpack": "^5",
+    "graphql": "^16"
   }
 }

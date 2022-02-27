@@ -1,0 +1,73 @@
+fragment Customer on Customer {
+  id
+  firstName
+  lastName
+  displayName
+  email
+  phone
+  tags
+  acceptsMarketing
+  updatedAt
+  createdAt
+  metafields(first: 10) {
+    edges {
+      node {
+        value
+        key
+      }
+    }
+  }
+}
+
+query customerGet($customerAccessToken: String!) {
+  customer(customerAccessToken: $customerAccessToken) {
+    ...Customer
+  }
+}
+
+mutation customerCreate($input: CustomerCreateInput!) {
+  customerCreate(input: $input) {
+    customerUserErrors {
+      code
+      field
+      message
+    }
+    customer {
+      ...Customer
+    }
+  }
+}
+
+mutation customerAccessTokenCreate($input: CustomerAccessTokenCreateInput!) {
+  customerAccessTokenCreate(input: $input) {
+    customerAccessToken {
+      accessToken
+      expiresAt
+    }
+    customerUserErrors {
+      code
+      field
+      message
+    }
+  }
+}
+
+mutation customerUpdate(
+  $customer: CustomerUpdateInput!
+  $customerAccessToken: String!
+) {
+  customerUpdate(
+    customer: $customer
+    customerAccessToken: $customerAccessToken
+  ) {
+    customerUserErrors {
+      code
+      field
+      message
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
