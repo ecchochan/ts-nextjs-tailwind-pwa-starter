@@ -12,12 +12,14 @@ import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 import Skeleton from '@/components/Skeleton';
 
+import { useHeader } from '@/store/app';
+
 import MainLayout from '@/layouts/MainLayout';
 
 type Color = typeof colorList[number];
 
 export default function ComponentsPage() {
-  const [mode, setMode] = React.useState<'dark' | 'light'>('light');
+  useHeader();
   const [color, setColor] = React.useState<Color>('sky');
   function toggleMode() {
     return mode === 'dark' ? setMode('light') : setMode('dark');
