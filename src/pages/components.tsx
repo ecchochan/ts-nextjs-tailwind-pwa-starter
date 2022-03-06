@@ -21,11 +21,6 @@ type Color = typeof colorList[number];
 export default function ComponentsPage() {
   useHeader();
   const [color, setColor] = React.useState<Color>('sky');
-  function toggleMode() {
-    return mode === 'dark' ? setMode('light') : setMode('dark');
-  }
-
-  const textColor = mode === 'dark' ? 'text-gray-300' : 'text-gray-600';
 
   return (
     <MainLayout>
@@ -37,15 +32,13 @@ export default function ComponentsPage() {
       <main>
         <section
           className={clsx(
-            'h-screen overflow-y-auto',
-            mode === 'dark' ? 'bg-dark' : 'bg-gray-50',
+            'h-screen overflow-y-auto bg-gray-50 dark:bg-dark',
             color
           )}
         >
           <div
             className={clsx(
-              'layout min-h-screen py-20',
-              mode === 'dark' ? 'text-white' : 'text-black'
+              'layout min-h-screen py-20 text-black dark:text-white'
             )}
           >
             <h1>Built-in Components</h1>
@@ -53,20 +46,10 @@ export default function ComponentsPage() {
               Back to Home
             </ArrowLink>
 
-            <div className='mt-8 flex flex-wrap gap-2'>
-              <Button
-                onClick={toggleMode}
-                variant={mode === 'dark' ? 'light' : 'dark'}
-              >
-                Set to {mode === 'dark' ? 'light' : 'dark'}
-              </Button>
-              {/* <Button onClick={randomize}>Randomize CSS Variable</Button> */}
-            </div>
-
             <ol className='mt-8 space-y-6'>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>Customize Colors</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <h3>Customize Colors</h3>
+                <p>
                   You can change primary color to any Tailwind CSS colors. See
                   globals.css to change your color.
                 </p>
@@ -77,9 +60,7 @@ export default function ComponentsPage() {
                     value={color}
                     className={clsx(
                       'block max-w-xs rounded',
-                      mode === 'dark'
-                        ? 'border border-gray-600 bg-dark'
-                        : 'border-gray-300 bg-white',
+                      'border-gray-300 bg-white dark:border dark:border-gray-600 dark:bg-dark',
                       'focus:border-primary-400 focus:outline-none focus:ring focus:ring-primary-400'
                     )}
                     onChange={(e) => setColor(e.target.value as Color)}
@@ -128,8 +109,8 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>UnstyledLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <h3>UnstyledLink</h3>
+                <p>
                   No style applied, differentiate internal and outside links,
                   give custom cursor for outside links.
                 </p>
@@ -141,8 +122,8 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>PrimaryLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <h3>PrimaryLink</h3>
+                <p>
                   Add styling on top of UnstyledLink, giving a primary color to
                   the link.
                 </p>
@@ -154,8 +135,8 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>UnderlineLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <h3>UnderlineLink</h3>
+                <p>
                   Add styling on top of UnstyledLink, giving a dotted and
                   animated underline.
                 </p>
@@ -167,8 +148,8 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>ArrowLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
+                <h3>ArrowLink</h3>
+                <p>
                   Useful for indicating navigation, I use this quite a lot, so
                   why not build a component with some whimsy touch?
                 </p>
@@ -195,10 +176,8 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>ButtonLink</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
-                  Button styled link with 3 variants.
-                </p>
+                <h3>ButtonLink</h3>
+                <p>Button styled link with 3 variants.</p>
                 <div className='flex flex-wrap gap-2'>
                   <ButtonLink
                     variant='primary'
@@ -208,14 +187,12 @@ export default function ComponentsPage() {
                   </ButtonLink>
                   <ButtonLink
                     variant='outline'
-                    isDarkBg={mode === 'dark'}
                     href='https://theodorusclarence.com'
                   >
                     Outline Variant
                   </ButtonLink>
                   <ButtonLink
                     variant='ghost'
-                    isDarkBg={mode === 'dark'}
                     href='https://theodorusclarence.com'
                   >
                     Ghost Variant
@@ -235,18 +212,12 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>Button</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
-                  Ordinary button with style.
-                </p>
+                <h3>Button</h3>
+                <p>Ordinary button with style.</p>
                 <div className='flex flex-wrap gap-2'>
                   <Button variant='primary'>Primary Variant</Button>
-                  <Button variant='outline' isDarkBg={mode === 'dark'}>
-                    Outline Variant
-                  </Button>
-                  <Button variant='ghost' isDarkBg={mode === 'dark'}>
-                    Ghost Variant
-                  </Button>
+                  <Button variant='outline'>Outline Variant</Button>
+                  <Button variant='ghost'>Ghost Variant</Button>
                   <Button variant='dark'>Dark Variant</Button>
                   <Button variant='light'>Light Variant</Button>
                 </div>
@@ -254,10 +225,10 @@ export default function ComponentsPage() {
                   <Button disabled variant='primary'>
                     Disabled
                   </Button>
-                  <Button disabled variant='outline' isDarkBg={mode === 'dark'}>
+                  <Button disabled variant='outline'>
                     Disabled
                   </Button>
-                  <Button disabled variant='ghost' isDarkBg={mode === 'dark'}>
+                  <Button disabled variant='ghost'>
                     Disabled
                   </Button>
                   <Button disabled variant='dark'>
@@ -271,14 +242,10 @@ export default function ComponentsPage() {
                   <Button isLoading variant='primary'>
                     Disabled
                   </Button>
-                  <Button
-                    isLoading
-                    variant='outline'
-                    isDarkBg={mode === 'dark'}
-                  >
+                  <Button isLoading variant='outline'>
                     Disabled
                   </Button>
-                  <Button isLoading variant='ghost' isDarkBg={mode === 'dark'}>
+                  <Button isLoading variant='ghost'>
                     Disabled
                   </Button>
                   <Button isLoading variant='dark'>
@@ -290,19 +257,15 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>Custom 404 Page</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
-                  Styled 404 page with some animation.
-                </p>
+                <h3>Custom 404 Page</h3>
+                <p>Styled 404 page with some animation.</p>
                 <div className='flex flex-wrap gap-2'>
                   <ButtonLink href='/404'>Visit the 404 page</ButtonLink>
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>Next Image</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
-                  Next Image with default props and skeleton animation
-                </p>
+                <h3>Next Image</h3>
+                <p>Next Image with default props and skeleton animation</p>
                 <NextImage
                   className='mt-8'
                   src='/favicon/apple-icon-180x180.png'
@@ -312,10 +275,8 @@ export default function ComponentsPage() {
                 />
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg tablet:text-xl'>Skeleton</h2>
-                <p className={clsx('!mt-1 text-sm', textColor)}>
-                  Skeleton with shimmer effect
-                </p>
+                <h3>Skeleton</h3>
+                <p>Skeleton with shimmer effect</p>
                 <Skeleton className='h-72 w-72' />
               </li>
             </ol>

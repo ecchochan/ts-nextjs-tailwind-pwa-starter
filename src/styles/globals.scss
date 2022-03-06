@@ -49,19 +49,23 @@
 
   /* #region  /**=========== Typography =========== */
   h1 {
-    @apply font-primary text-2xl font-bold tablet:text-4xl;
+    @apply font-primary text-2xl font-bold text-black dark:text-white tablet:text-4xl;
   }
 
   h2 {
-    @apply font-primary text-xl font-bold tablet:text-3xl;
+    @apply font-primary text-xl font-bold text-black dark:text-white tablet:text-3xl;
   }
 
   h3 {
-    @apply font-primary text-lg font-bold tablet:text-2xl;
+    @apply font-primary text-lg font-bold text-black dark:text-white tablet:text-2xl;
   }
 
   h4 {
-    @apply font-primary text-base font-bold tablet:text-lg;
+    @apply font-primary text-base font-bold text-black dark:text-white tablet:text-lg;
+  }
+
+  p {
+    @apply text-sm text-gray-600 dark:text-gray-300;
   }
 
   select {
