@@ -15,5 +15,6 @@
     ]
   },
   "headwind.runOnSave": false,
-  "liveServer.settings.root": "./out"
+  "liveServer.settings.root": "./out",
+  "files.associations": { "*.scss": "postcss" }
 }
