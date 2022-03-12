@@ -11,6 +11,7 @@ module.exports = {
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   rules: {
     'no-unused-vars': 'off',
@@ -36,7 +37,6 @@ module.exports = {
       },
     ],
     //#endregion  //*======== Unused Import ===========
-
     //#region  //*=========== Import Sort ===========
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': [

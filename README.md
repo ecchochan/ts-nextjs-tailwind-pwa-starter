@@ -23,6 +23,7 @@ This repository is 🔋 battery packed with:
 - 🦺 CSP secured
 - 📈 GA Support
 - ✨ TypeScript
+- 📖 Storybook
 - 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
 - 🌚 Dark Mode Enabled
 - 🏃 Motion Framer Installed
@@ -99,6 +100,12 @@ Don't forget to change the package name in package.json
 ### 5. Commit Message Convention
 
 This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
+
+### 6. NPM audit security vulnerability
+
+When we do `npm install`, it probably reports a lot of vulnerabilities. But this reports the packages including `devDependencies`, so to exclude them we can run `npm audit --production` to actually find out any packages in production are vulerable.
+
+(Reference: https://overreacted.io/npm-audit-broken-by-design/)
 
 ## Expansion Pack 📦
 
