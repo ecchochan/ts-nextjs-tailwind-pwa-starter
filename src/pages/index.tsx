@@ -7,7 +7,6 @@ import Seo from '@/components/Seo';
 
 import { useHeader } from '@/store/app';
 
-import Fade from '@/animations/Fade';
 import MainLayout from '@/layouts/MainLayout';
 
 /**
@@ -33,7 +32,7 @@ export default function HomePage() {
 
       <main>
         <section>
-          <Fade.div className='layout wrapper'>
+          <div className='layout wrapper'>
             <Vercel className='transition-simple fill-slate-800 text-5xl dark:fill-slate-100' />
             <h1 className='mt-4'>
               Next.js + Tailwind CSS + TypeScript Starter
@@ -58,7 +57,7 @@ export default function HomePage() {
                 Theodorus Clarence
               </UnderlineLink>
             </footer>
-          </Fade.div>
+          </div>
         </section>
       </main>
     </MainLayout>
