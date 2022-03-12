@@ -5,6 +5,8 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
 
+import { useHeader } from '@/store/app';
+
 import Fade from '@/animations/Fade';
 import MainLayout from '@/layouts/MainLayout';
 
@@ -22,6 +24,8 @@ import Vercel from '~/svg/Vercel.svg';
 // to customize the default configuration.
 
 export default function HomePage() {
+  useHeader();
+
   return (
     <MainLayout>
       {/* <Seo templateTitle='Home' /> */}

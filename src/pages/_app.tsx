@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -8,10 +9,16 @@ import '@/styles/colors.css';
 
 import * as gtag from '@/lib/gtag';
 
+import useAppState from '@/store/app';
+
+import Header from '@/layouts/MainLayout/Header';
+
 const isProduction = process.env.NODE_ENV === 'production';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  const showHeader = useAppState((state) => state.showHeader);
 
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
@@ -26,7 +33,19 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div suppressHydrationWarning>
-      {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+      {typeof window === 'undefined' ? null : (
+        <>
+          {showHeader && <Header />}
+
+          <AnimatePresence
+            exitBeforeEnter
+            initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}
+          >
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </>
+      )}
     </div>
   );
 }

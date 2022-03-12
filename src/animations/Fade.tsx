@@ -1,18 +1,23 @@
-import { AnimatePresence, HTMLMotionProps, motion } from 'framer-motion';
+import { HTMLMotionProps, motion } from 'framer-motion';
 import * as React from 'react';
+
+export const fadeInOutProps = {
+  initial: 'hidden',
+  animate: 'enter',
+  exit: 'exit',
+  variants: {
+    hidden: { opacity: 0, x: -0, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 0 },
+  },
+  transition: { type: 'linear', duration: 0.3 },
+};
 
 const FadeDiv: React.FC<HTMLMotionProps<'div'>> = ({ children, ...props }) => {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        {...props}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <motion.div {...fadeInOutProps} {...props}>
+      {children}
+    </motion.div>
   );
 };
 

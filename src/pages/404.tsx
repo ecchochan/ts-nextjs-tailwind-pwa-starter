@@ -4,16 +4,20 @@ import { RiAlarmWarningFill } from 'react-icons/ri';
 import ArrowLink from '@/components/links/ArrowLink';
 import Seo from '@/components/Seo';
 
+import { useHeader } from '@/store/app';
+
 import MainLayout from '@/layouts/MainLayout';
 
 export default function NotFoundPage() {
+  useHeader();
+
   return (
     <MainLayout>
       <Seo templateTitle='Not Found' />
 
       <main>
         <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
+          <div className='layout wrapper text-black'>
             <RiAlarmWarningFill
               size={60}
               className='drop-shadow-glow animate-flicker text-red-500'
