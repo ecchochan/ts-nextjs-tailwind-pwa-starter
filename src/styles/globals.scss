@@ -49,19 +49,19 @@
 
   /* #region  /**=========== Typography =========== */
   h1 {
-    @apply font-primary text-2xl font-bold md:text-4xl;
+    @apply font-primary text-2xl font-bold tablet:text-4xl;
   }
 
   h2 {
-    @apply font-primary text-xl font-bold md:text-3xl;
+    @apply font-primary text-xl font-bold tablet:text-3xl;
   }
 
   h3 {
-    @apply font-primary text-lg font-bold md:text-2xl;
+    @apply font-primary text-lg font-bold tablet:text-2xl;
   }
 
   h4 {
-    @apply font-primary text-base font-bold md:text-lg;
+    @apply font-primary text-base font-bold tablet:text-lg;
   }
 
   select {
@@ -69,7 +69,7 @@
   }
 
   body {
-    @apply font-primary text-sm md:text-base;
+    @apply font-primary text-sm tablet:text-base;
     font-size: 62.5%;
   }
   /* #endregion  /**======== Typography =========== */

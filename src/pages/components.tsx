@@ -63,7 +63,7 @@ export default function ComponentsPage() {
 
             <ol className='mt-8 space-y-6'>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>Customize Colors</h2>
+                <h2 className='text-lg tablet:text-xl'>Customize Colors</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   You can change primary color to any Tailwind CSS colors. See
                   globals.css to change your color.
@@ -126,7 +126,7 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>UnstyledLink</h2>
+                <h2 className='text-lg tablet:text-xl'>UnstyledLink</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   No style applied, differentiate internal and outside links,
                   give custom cursor for outside links.
@@ -139,7 +139,7 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>PrimaryLink</h2>
+                <h2 className='text-lg tablet:text-xl'>PrimaryLink</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Add styling on top of UnstyledLink, giving a primary color to
                   the link.
@@ -152,7 +152,7 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>UnderlineLink</h2>
+                <h2 className='text-lg tablet:text-xl'>UnderlineLink</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Add styling on top of UnstyledLink, giving a dotted and
                   animated underline.
@@ -165,7 +165,7 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>ArrowLink</h2>
+                <h2 className='text-lg tablet:text-xl'>ArrowLink</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Useful for indicating navigation, I use this quite a lot, so
                   why not build a component with some whimsy touch?
@@ -193,7 +193,7 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>ButtonLink</h2>
+                <h2 className='text-lg tablet:text-xl'>ButtonLink</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Button styled link with 3 variants.
                 </p>
@@ -233,7 +233,7 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>Button</h2>
+                <h2 className='text-lg tablet:text-xl'>Button</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Ordinary button with style.
                 </p>
@@ -288,7 +288,7 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>Custom 404 Page</h2>
+                <h2 className='text-lg tablet:text-xl'>Custom 404 Page</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Styled 404 page with some animation.
                 </p>
@@ -297,7 +297,7 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>Next Image</h2>
+                <h2 className='text-lg tablet:text-xl'>Next Image</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Next Image with default props and skeleton animation
                 </p>
@@ -310,7 +310,7 @@ export default function ComponentsPage() {
                 />
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>Skeleton</h2>
+                <h2 className='text-lg tablet:text-xl'>Skeleton</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Skeleton with shimmer effect
                 </p>

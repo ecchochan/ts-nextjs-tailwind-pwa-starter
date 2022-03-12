@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
+const breakpoints = require('./tailwind.config.breakpoints.js');
+
 function withOpacityValue(variable) {
   return ({ opacityValue }) => {
     if (opacityValue === undefined) {
@@ -61,6 +63,7 @@ module.exports = {
         shimmer: 'shimmer 1.3s linear infinite',
       },
     },
+    screens: breakpoints,
   },
   plugins: [require('@tailwindcss/forms')],
 };
