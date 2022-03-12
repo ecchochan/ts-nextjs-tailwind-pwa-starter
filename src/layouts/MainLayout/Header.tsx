@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
 
+import Fade from '@/animations/Fade';
+
 const links = [
   { href: '/', label: 'Route 1' },
   { href: '/', label: 'Route 2' },
@@ -10,7 +12,7 @@ const links = [
 export default function Header() {
   return (
     <header className='sticky top-0 z-50 bg-white'>
-      <div className='layout flex h-14 items-center justify-between'>
+      <Fade className='layout flex h-8 items-center justify-between lg:h-14'>
         <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
           Home
         </UnstyledLink>
@@ -25,7 +27,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-      </div>
+      </Fade>
     </header>
   );
 }
