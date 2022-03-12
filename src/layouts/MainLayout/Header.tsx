@@ -13,7 +13,7 @@ const links = [
 export default function Header() {
   return (
     <header className='fixed top-0 z-50 w-full'>
-      <Fade className='layout flex h-12 items-center justify-between lg:h-14'>
+      <Fade.div className='layout flex h-12 items-center justify-between lg:h-14'>
         <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
           Home
         </UnstyledLink>
@@ -29,7 +29,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-      </Fade>
+      </Fade.div>
     </header>
   );
 }

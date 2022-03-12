@@ -29,7 +29,7 @@ export default function HomePage() {
 
       <main>
         <section>
-          <Fade className='layout flex min-h-screen flex-col items-center justify-center text-center'>
+          <Fade.div className='layout wrapper'>
             <Vercel className='transition-simple fill-slate-800 text-5xl dark:fill-slate-100' />
             <h1 className='mt-4'>
               Next.js + Tailwind CSS + TypeScript Starter
@@ -54,7 +54,7 @@ export default function HomePage() {
                 Theodorus Clarence
               </UnderlineLink>
             </footer>
-          </Fade>
+          </Fade.div>
         </section>
       </main>
     </MainLayout>

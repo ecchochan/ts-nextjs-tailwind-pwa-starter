@@ -75,8 +75,12 @@
   /* #endregion  /**======== Typography =========== */
 
   .layout {
-    max-width: rem.convert(1100px);
-    @apply mx-auto w-11/12;
+    // max-width: rem.convert(1100px);
+    @apply mx-auto w-11/12 max-w-5xl;
+  }
+
+  .wrapper {
+    @apply flex min-h-screen flex-col items-center justify-center text-center;
   }
 
   .bg-dark a.custom-link {
