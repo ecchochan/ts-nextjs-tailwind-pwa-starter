@@ -38,7 +38,8 @@
     "sass": "^1.49.7",
     "sass-rem": "^3.0.0",
     "tailwind-merge": "^1.2.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "zustand": "^3.7.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
