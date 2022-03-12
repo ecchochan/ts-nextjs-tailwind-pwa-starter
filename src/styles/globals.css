@@ -70,6 +70,10 @@
     @apply font-primary text-base font-bold md:text-lg;
   }
 
+  select {
+    background-image: none;
+  }
+
   body,
   .p {
     @apply font-primary text-sm md:text-base;
@@ -83,7 +87,7 @@
   }
 
   .bg-dark a.custom-link {
-    @apply border-gray-200 hover:border-gray-200/0;
+    @apply / border-gray-200 hover:border-gray-200/0;
   }
 
   /* Class to adjust with sticky footer */
