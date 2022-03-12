@@ -44,6 +44,7 @@ export default function Seo(props: SeoProps) {
     <Head>
       <title>{meta.title}</title>
       <meta name='robots' content={meta.robots} />
+      <link rel='manifest' href='/manifest.json' />
       <meta content={meta.description} name='description' />
       <meta property='og:url' content={`${meta.url}${router.asPath}`} />
       <link rel='canonical' href={`${meta.url}${router.asPath}`} />
