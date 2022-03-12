@@ -8,12 +8,6 @@ import '@/styles/colors.css';
 
 import * as gtag from '@/lib/gtag';
 
-/**
- * !STARTERCONF info
- * ? `Layout` component is called in every page using `np` snippets. If you have consistent layout across all page, you can add it here too
- */
-import Layout from '@/components/layout/Layout';
-
 const isProduction = process.env.NODE_ENV === 'production';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -31,9 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events]);
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <div suppressHydrationWarning>
+      {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+    </div>
   );
 }
 

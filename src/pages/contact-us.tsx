@@ -1,18 +1,19 @@
 import * as React from 'react';
 
-import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
+
+import MainLayout from '@/layouts/MainLayout';
 
 export default function ComponentsPage() {
   return (
-    <Layout>
+    <MainLayout>
       <Seo
         templateTitle='Contact Us'
         description='Contact us for more details'
       />
 
       <main>Contact Us</main>
-    </Layout>
+    </MainLayout>
   );
 }
 
