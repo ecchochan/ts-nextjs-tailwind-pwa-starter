@@ -30,12 +30,7 @@ export default function ComponentsPage() {
       />
 
       <main>
-        <section
-          className={clsx(
-            'h-screen overflow-y-auto bg-gray-50 dark:bg-dark',
-            color
-          )}
-        >
+        <section className={clsx(color)}>
           <div
             className={clsx(
               'layout min-h-screen py-20 text-black dark:text-white'

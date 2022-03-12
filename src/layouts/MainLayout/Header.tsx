@@ -1,7 +1,14 @@
 import * as React from 'react';
 
+import style from './Header.module.scss';
+
+import clsxm from '@/lib/clsxm';
+
 import DarkModeToggler from '@/components/buttons/DarkModeToggler';
 import UnstyledLink from '@/components/links/UnstyledLink';
+
+import { useDarkMode } from '@/store/app';
+import { useScrollState } from '@/store/window';
 
 import Fade from '@/animations/Fade';
 
@@ -11,8 +18,36 @@ const links = [
 ];
 
 export default function Header() {
+  const darkMode = useDarkMode()[0];
+  const { isTop, scrollingUp } = useScrollState();
   return (
-    <header className='fixed top-0 z-50 w-full'>
+    <header
+      className={clsxm(
+        style.transition,
+        'fixed top-0 z-50 w-full',
+        scrollingUp || isTop ? 'opacity-1' : '-translate-y-full opacity-0'
+      )}
+    >
+      <div
+        style={{
+          opacity: darkMode ? 1 : 0,
+        }}
+        className={clsxm(
+          style.transition,
+          style.darkGradient,
+          'absolute -z-10 h-full w-full pb-3'
+        )}
+      ></div>
+      <div
+        style={{
+          opacity: darkMode ? 0 : 1,
+        }}
+        className={clsxm(
+          style.transition,
+          style.whiteGradient,
+          'absolute -z-10 h-full w-full pb-3'
+        )}
+      ></div>
       <Fade.div className='layout flex h-12 items-center justify-between laptop:h-14'>
         <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
           Logo
