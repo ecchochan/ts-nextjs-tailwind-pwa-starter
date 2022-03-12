@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
