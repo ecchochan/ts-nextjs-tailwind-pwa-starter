@@ -262,7 +262,8 @@ export default function ComponentsPage() {
                 <h3>Next Image</h3>
                 <p>Next Image with default props and skeleton animation</p>
                 <NextImage
-                  className='mt-8'
+                  useSkeleton
+                  className='md:w-40 w-32'
                   src='/favicon/apple-icon-180x180.png'
                   width='180'
                   height='180'
