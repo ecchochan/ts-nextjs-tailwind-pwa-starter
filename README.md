@@ -18,7 +18,7 @@
 This repository is 🔋 battery packed with:
 
 - ⚡️ Next.js 12
-- ⚛️ React 17
+- ⚛️ React 18
 - 📱 PWA Enabled
 - 🦺 CSP secured
 - 📈 GA Support
@@ -39,7 +39,7 @@ This repository is 🔋 battery packed with:
 - 👷 Github Actions — Lint your code on PR
 - 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
 - 🔥 Snippets — A collection of useful snippets
-- 👀 Default Open Graph — Awesome open graph generated using [og.thcl.dev](https://github.com/theodorusclarence/og), fork it and deploy!
+- 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
 - 🗺 Site Map — Automatically generate sitemap.xml
 - 📦 Expansion Pack — Easily install common libraries, additional components, and configs
 
@@ -87,9 +87,31 @@ You can start the server using this command:
 yarn dev
 ```
 
+### 4. Generate a static build
+
+You can generate a static build using this command:
+
+```bash
+yarn export
+
+# and preview the HTML site by
+yarn preview-export
+```
+
+### 5. Build the NextJS application
+
+You can generate a static build using this command:
+
+```bash
+yarn build
+
+# and run the built server ny
+yarn start
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
 
-### 4. Change defaults
+### 6. Change defaults
 
 There are some things you need to change including title, urls, favicons, etc.
 
@@ -97,11 +119,11 @@ Find all comments with !STARTERCONF, then follow the guide.
 
 Don't forget to change the package name in package.json
 
-### 5. Commit Message Convention
+### 7. Commit Message Convention
 
 This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
 
-### 6. NPM audit security vulnerability
+### 8. NPM audit security vulnerability
 
 When we do `npm install`, it probably reports a lot of vulnerabilities. But this reports the packages including `devDependencies`, so to exclude them we can run `npm audit --production` to actually find out any packages in production are vulerable.
 

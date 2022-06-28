@@ -8,7 +8,13 @@ import { useHeader } from '@/store/app';
 
 import MainLayout from '@/layouts/MainLayout';
 
-export default function NotFoundPage() {
+interface Props {
+  homeUrl?: string;
+}
+
+export default function NotFoundPage(props: Props) {
+  const { homeUrl } = props;
+
   useHeader();
 
   return (
@@ -23,7 +29,7 @@ export default function NotFoundPage() {
               className='drop-shadow-glow animate-flicker text-red-500'
             />
             <h1 className='mt-8 text-4xl tablet:text-6xl'>Page Not Found</h1>
-            <ArrowLink className='mt-4 tablet:text-lg' href='/'>
+            <ArrowLink className='mt-4 tablet:text-lg' href={homeUrl ?? '/'}>
               Back to Home
             </ArrowLink>
           </div>

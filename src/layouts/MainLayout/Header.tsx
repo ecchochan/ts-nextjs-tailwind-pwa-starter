@@ -15,6 +15,7 @@ import Fade from '@/animations/Fade';
 const links = [
   { href: '/', label: 'Home' },
   { href: '/contact-us', label: 'Contact Us' },
+  { href: '/app', label: 'Login' },
 ];
 
 export default function Header() {

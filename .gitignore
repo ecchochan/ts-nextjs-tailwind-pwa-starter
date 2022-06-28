@@ -36,7 +36,10 @@ yarn-error.log*
 # next-sitemap
 robots.txt
 sitemap.xml
+sitemap-*.xml
 
 # service worker
 public/sw.js
-public/workbox-1846d813.js
+public/workbox-*.js
+
+

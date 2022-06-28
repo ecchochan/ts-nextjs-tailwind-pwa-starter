@@ -32,21 +32,19 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events]);
 
   return (
-    <div suppressHydrationWarning>
-      {typeof window === 'undefined' ? null : (
-        <>
-          {showHeader && <Header />}
+    <>
+      <AnimatePresence exitBeforeEnter initial={true}>
+        {showHeader && <Header />}
+      </AnimatePresence>
 
-          <AnimatePresence
-            exitBeforeEnter
-            initial={true}
-            onExitComplete={() => window.scrollTo(0, 0)}
-          >
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
-        </>
-      )}
-    </div>
+      <AnimatePresence
+        exitBeforeEnter
+        initial={true}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
+    </>
   );
 }
 

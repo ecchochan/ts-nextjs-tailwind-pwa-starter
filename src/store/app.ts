@@ -52,6 +52,11 @@ export const useHeader = (showHeader = true) => {
     useAppState.setState({
       showHeader,
     });
+    return () => {
+      useAppState.setState({
+        showHeader: false,
+      });
+    };
   }, [showHeader]);
 };
 
