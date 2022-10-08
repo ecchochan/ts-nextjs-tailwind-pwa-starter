@@ -35,7 +35,7 @@ This repository is 🔋 battery packed with:
 - 💖 Prettier — Format your code consistently
 - 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
 - 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
-- ⏰ Standard Version Changelog — Generate your changelog using `yarn release`
+- ⏰ Release Please — Generate your changelog by activating the `release-please` workflow
 - 👷 Github Actions — Lint your code on PR
 - 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
 - 🔥 Snippets — A collection of useful snippets
@@ -67,7 +67,13 @@ You can also check all of the **details and demos** on my blog post:
    npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
    ```
 
-3. Deploy to Vercel
+3. Using `degit`
+
+   ```bash
+   npx degit theodorusclarence/ts-nextjs-tailwind-starter YOUR_APP_NAME
+   ```
+
+4. Deploy to Vercel
 
    [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter)
 
@@ -128,6 +134,19 @@ This starter is using [conventional commits](https://www.conventionalcommits.org
 When we do `npm install`, it probably reports a lot of vulnerabilities. But this reports the packages including `devDependencies`, so to exclude them we can run `npm audit --production` to actually find out any packages in production are vulerable.
 
 (Reference: https://overreacted.io/npm-audit-broken-by-design/)
+
+## Projects using ts-nextjs-tailwind-starter
+
+<!--
+TEMPLATE
+- [sitename](https://sitelink.com) ([Source](https://github.com/githublink))
+- [sitename](https://sitelink.com)
+-->
+
+- [theodorusclarence.com](https://theodorusclarence.com) ([Source](https://github.com/theodorusclarence/theodorusclarence.com))
+- [Notiolink](https://notiolink.thcl.dev/) ([Source](https://github.com/theodorusclarence/notiolink))
+
+Are you using this starter? Please add your page (and repo) to the end of the list via a [Pull Request](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/edit/main/README.md). 😃
 
 ## Expansion Pack 📦
 

@@ -1,5 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const withPWA = require('next-pwa');
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV !== 'production',
+});
 
 const SPA_PATH = '/app';
 
@@ -44,12 +49,6 @@ module.exports = withPWA({
     });
 
     return config;
-  },
-  pwa: {
-    dest: 'public',
-    register: true,
-    skipWaiting: true,
-    disable: process.env.NODE_ENV !== 'production',
   },
   images: process.env.EXPORTING
     ? {
