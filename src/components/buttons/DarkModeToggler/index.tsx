@@ -1,19 +1,19 @@
+import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 
 import style from './style.module.scss';
 
-import { useDarkMode } from '@/store/app';
+import { appStore } from '@/store/app';
 
-export default function DarkModeToggler() {
-  const [darkMode, setDarkMode] = useDarkMode();
+const DarkModeToggler = observer(() => {
   return (
     <label className={style['dark-mode-toggler']}>
       <input
         className={style['toggle-checkbox']}
         type='checkbox'
-        checked={darkMode}
+        checked={appStore.darkMode}
         onChange={() => {
-          setDarkMode();
+          appStore.toggleDarkMode();
         }}
       ></input>
       <div className={style['toggle-slot']}>
@@ -66,4 +66,6 @@ export default function DarkModeToggler() {
       </div>
     </label>
   );
-}
+});
+
+export default DarkModeToggler;

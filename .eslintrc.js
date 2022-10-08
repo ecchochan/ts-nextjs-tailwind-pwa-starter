@@ -54,7 +54,7 @@ module.exports = {
           ['^@/data'],
           // components
           ['^@/components', '^@/container'],
-          // zustand store
+          // mobx store
           ['^@/store'],
           // Other imports
           ['^@/'],

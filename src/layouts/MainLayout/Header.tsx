@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 
 import style from './Header.module.scss';
@@ -7,7 +8,7 @@ import clsxm from '@/lib/clsxm';
 import DarkModeToggler from '@/components/buttons/DarkModeToggler';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
-import { useDarkMode } from '@/store/app';
+import { appStore } from '@/store/app';
 import { useScrollState } from '@/store/window';
 
 import Fade from '@/animations/Fade';
@@ -18,8 +19,8 @@ const links = [
   { href: '/app', label: 'Login' },
 ];
 
-export default function Header() {
-  const darkMode = useDarkMode()[0];
+const Header = observer(() => {
+  const darkMode = appStore.darkMode;
   const { isTop, scrollingUp } = useScrollState();
   return (
     <header
@@ -68,4 +69,6 @@ export default function Header() {
       </Fade.div>
     </header>
   );
-}
+});
+
+export default Header;

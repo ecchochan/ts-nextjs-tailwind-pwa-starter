@@ -1,20 +1,28 @@
+import { intercept, makeAutoObservable } from 'mobx';
 import { useEffect } from 'react';
-import create from 'zustand';
 
-interface AppState {
-  showHeader: boolean;
-  darkMode: boolean;
-  setDarkMode: (isDark?: boolean | undefined) => unknown;
+class AppStore {
+  showHeader = false;
+  darkMode = false;
+
+  constructor() {
+    makeAutoObservable(this);
+  }
+
+  toggleDarkMode() {
+    this.darkMode = !this.darkMode;
+  }
+
+  setDarkMode(darkMode: boolean) {
+    this.darkMode = darkMode;
+  }
+
+  setShowHeader(showHeader: boolean) {
+    this.showHeader = showHeader;
+  }
 }
 
-const useAppState = create<AppState>((set) => ({
-  showHeader: false,
-  darkMode: false,
-  setDarkMode: (isDark?: boolean) =>
-    set((state) => ({
-      darkMode: isDark === undefined ? !state.darkMode : isDark,
-    })),
-}));
+export const appStore = new AppStore();
 
 if (typeof window !== 'undefined') {
   if (
@@ -24,49 +32,30 @@ if (typeof window !== 'undefined') {
       window.matchMedia('(prefers-color-scheme: dark)').matches)
   ) {
     document.documentElement.classList.add('dark');
-    useAppState.setState({
-      darkMode: true,
-    });
+    appStore.setDarkMode(true);
   } else {
     document.documentElement.classList.remove('dark');
-    useAppState.setState({
-      darkMode: false,
-    });
+    appStore.setDarkMode(false);
   }
 
-  useAppState.subscribe((state, prevState) => {
-    if (prevState.darkMode !== state.darkMode) {
-      if (state.darkMode) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('color-theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('color-theme', 'light');
-      }
+  intercept(appStore, 'darkMode', (change) => {
+    const isDarkMode = change.newValue;
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('color-theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('color-theme', 'light');
     }
+    return change;
   });
 }
 
 export const useHeader = (showHeader = true) => {
   useEffect(() => {
-    useAppState.setState({
-      showHeader,
-    });
+    appStore.setShowHeader(showHeader);
     return () => {
-      useAppState.setState({
-        showHeader: false,
-      });
+      appStore.setShowHeader(false);
     };
   }, [showHeader]);
 };
-
-export const useDarkMode = (): [
-  boolean,
-  (isDark?: boolean | undefined) => unknown
-] => {
-  const darkMode = useAppState((state) => state.darkMode);
-  const setDarkMode = useAppState((state) => state.setDarkMode);
-  return [darkMode, setDarkMode];
-};
-
-export default useAppState;

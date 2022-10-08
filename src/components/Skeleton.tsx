@@ -1,13 +1,13 @@
+import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 
 import clsxm from '@/lib/clsxm';
 
-import { useDarkMode } from '@/store/app';
+import { appStore } from '@/store/app';
 
 type SkeletonProps = React.ComponentPropsWithoutRef<'div'>;
 
-export default function Skeleton({ className, ...rest }: SkeletonProps) {
-  const darkMode = useDarkMode()[0];
+const Skeleton = observer(({ className, ...rest }: SkeletonProps) => {
   return (
     <div
       className={clsxm(
@@ -15,7 +15,7 @@ export default function Skeleton({ className, ...rest }: SkeletonProps) {
         className
       )}
       style={{
-        backgroundImage: darkMode
+        backgroundImage: appStore.darkMode
           ? 'linear-gradient(to right, #202020 0%, #3b3b3b 20%, #202020 40%, #202020 100%)'
           : 'linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%)',
         backgroundSize: '700px 100%',
@@ -24,4 +24,6 @@ export default function Skeleton({ className, ...rest }: SkeletonProps) {
       {...rest}
     />
   );
-}
+});
+
+export default Skeleton;
