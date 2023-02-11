@@ -1,11 +1,5 @@
 import crypto from 'crypto';
-import Document, {
-  DocumentContext,
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document';
+import { Head, Html, Main, NextScript } from 'next/document';
 import { v4 } from 'uuid';
 
 import { GA_TRACKING_ID } from '@/lib/gtag';
@@ -39,20 +33,14 @@ const generateCsp = (): [csp: string, nonce: string] => {
   return [csp, nonce];
 };
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
-  render() {
-    const [csp, nonce] = generateCsp();
-    return (
-      <Html lang='en'>
-        <Head nonce={nonce}>
-          <meta property='csp-nonce' content={nonce} />
-          <meta httpEquiv='Content-Security-Policy' content={csp} />
-          {/* 
+export default function Document() {
+  const [csp, nonce] = generateCsp();
+  return (
+    <Html lang='en'>
+      <Head nonce={nonce}>
+        <meta property='csp-nonce' content={nonce} />
+        <meta httpEquiv='Content-Security-Policy' content={csp} />
+        {/* 
           <link
             rel='preload'
             href='/fonts/inter-var-latin.woff2'
@@ -61,23 +49,23 @@ class MyDocument extends Document {
             crossOrigin='anonymous'
           />
           */}
-          <link
-            href='https://fonts.googleapis.com/css2?family=Barlow&display=optional'
-            rel='stylesheet'
-          />
-          {/* enable analytics script only for production */}
-          {isProduction && (
-            <>
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-                nonce={nonce}
-              />
-              <script
-                nonce={nonce}
-                // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{
-                  __html: `
+        <link
+          href='https://fonts.googleapis.com/css2?family=Barlow&display=optional'
+          rel='stylesheet'
+        />
+        {/* enable analytics script only for production */}
+        {isProduction && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              nonce={nonce}
+            />
+            <script
+              nonce={nonce}
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -85,18 +73,15 @@ class MyDocument extends Document {
               page_path: window.location.pathname,
             });
           `,
-                }}
-              />
-            </>
-          )}
-        </Head>
-        <body className='transition-simple bg-white text-gray-800 dark:bg-dark dark:text-gray-100'>
-          <Main />
-          <NextScript nonce={nonce} />
-        </body>
-      </Html>
-    );
-  }
+              }}
+            />
+          </>
+        )}
+      </Head>
+      <body className='transition-simple bg-white text-gray-800 dark:bg-dark dark:text-gray-100'>
+        <Main />
+        <NextScript nonce={nonce} />
+      </body>
+    </Html>
+  );
 }
-
-export default MyDocument;

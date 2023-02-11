@@ -84,7 +84,7 @@
   }
 
   .wrapper {
-    @apply flex min-h-screen flex-col items-center justify-center text-center;
+    @apply relative flex min-h-screen flex-col items-center justify-center text-center;
   }
 
   .bg-dark a.custom-link {

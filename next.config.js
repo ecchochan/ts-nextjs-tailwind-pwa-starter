@@ -9,12 +9,13 @@ const withPWA = require('next-pwa')({
 const SPA_PATH = '/app';
 
 /** @type {import('next').NextConfig} */
-module.exports = withPWA({
+const nextConfig = withPWA({
   eslint: {
     dirs: ['src'],
   },
 
   reactStrictMode: true,
+  swcMinify: true,
 
   // Uncoment to add domain whitelist
   // images: {
@@ -57,3 +58,5 @@ module.exports = withPWA({
       }
     : undefined,
 });
+
+module.exports = nextConfig;

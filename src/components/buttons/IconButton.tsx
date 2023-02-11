@@ -4,32 +4,32 @@ import { ImSpinner2 } from 'react-icons/im';
 
 import clsxm from '@/lib/clsxm';
 
-const ButtonVariant = ['primary', 'outline', 'ghost', 'light', 'dark'] as const;
-const ButtonSize = ['sm', 'base'] as const;
+const IconButtonVariant = [
+  'primary',
+  'outline',
+  'ghost',
+  'light',
+  'dark',
+] as const;
 
-type ButtonProps = {
+type IconButtonProps = {
   isLoading?: boolean;
-  variant?: (typeof ButtonVariant)[number];
-  size?: (typeof ButtonSize)[number];
-  leftIcon?: IconType;
-  rightIcon?: IconType;
-  leftIconClassName?: string;
-  rightIconClassName?: string;
+  isDarkBg?: boolean;
+  variant?: (typeof IconButtonVariant)[number];
+  icon?: IconType;
+  iconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
   (
     {
-      children,
       className,
       disabled: buttonDisabled,
       isLoading,
       variant = 'primary',
-      size = 'base',
-      leftIcon: LeftIcon,
-      rightIcon: RightIcon,
-      leftIconClassName,
-      rightIconClassName,
+      isDarkBg = false,
+      icon: Icon,
+      iconClassName,
       ...rest
     },
     ref
@@ -42,16 +42,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded font-medium',
+          'inline-flex items-center justify-center rounded font-medium',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm',
           'transition-colors duration-75',
-          //#region  //*=========== Size ===========
-          [
-            size === 'base' && ['px-3 py-1.5', 'md:text-base text-sm'],
-            size === 'sm' && ['px-2 py-1', 'md:text-sm text-xs'],
-          ],
-          //#endregion  //*======== Size ===========
+          'md:min-h-[34px] md:min-w-[34px] md:p-2 min-h-[28px] min-w-[28px] p-1',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
@@ -65,13 +60,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               'text-primary-500',
               'border border-primary-500',
               'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              'dark:hover:bg-gray-900 dark:active:bg-gray-800 dark:disabled:bg-gray-800',
+              isDarkBg &&
+                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'ghost' && [
               'text-primary-500',
               'shadow-none',
               'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              'dark:hover:bg-gray-900 dark:active:bg-gray-800 dark:disabled:bg-gray-800',
+              isDarkBg &&
+                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'light' && [
               'bg-white text-gray-700',
@@ -107,46 +104,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             <ImSpinner2 className='animate-spin' />
           </div>
         )}
-        {LeftIcon && (
-          <div
-            className={clsxm([
-              size === 'base' && 'mr-1',
-              size === 'sm' && 'mr-1.5',
-            ])}
-          >
-            <LeftIcon
-              className={clsxm(
-                [
-                  size === 'base' && 'md:text-md text-md',
-                  size === 'sm' && 'md:text-md text-sm',
-                ],
-                leftIconClassName
-              )}
-            />
-          </div>
-        )}
-        {children}
-        {RightIcon && (
-          <div
-            className={clsxm([
-              size === 'base' && 'ml-1',
-              size === 'sm' && 'ml-1.5',
-            ])}
-          >
-            <RightIcon
-              className={clsxm(
-                [
-                  size === 'base' && 'text-md md:text-md',
-                  size === 'sm' && 'md:text-md text-sm',
-                ],
-                rightIconClassName
-              )}
-            />
-          </div>
-        )}
+        {Icon && <Icon className={clsxm(iconClassName)} />}
       </button>
     );
   }
 );
 
-export default Button;
+export default IconButton;

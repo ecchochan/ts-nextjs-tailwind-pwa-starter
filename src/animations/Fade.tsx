@@ -10,7 +10,7 @@ export const fadeInOutProps = {
     enter: { opacity: 1, x: 0, y: 0 },
     exit: { opacity: 0, x: 0, y: 0 },
   },
-  transition: { type: 'linear', duration: 0.3 },
+  transition: { duration: 0.3 },
 };
 
 const FadeDiv: React.FC<HTMLMotionProps<'div'>> = ({ children, ...props }) => {

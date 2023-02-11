@@ -1,8 +1,18 @@
 // !STARTERCONF You can delete this page
 import clsx from 'clsx';
 import * as React from 'react';
+import {
+  HiArrowRight,
+  HiOutlineCreditCard,
+  HiOutlineDesktopComputer,
+  HiOutlineDeviceMobile,
+  HiOutlineShieldCheck,
+  HiPlus,
+} from 'react-icons/hi';
 
 import Button from '@/components/buttons/Button';
+import IconButton from '@/components/buttons/IconButton';
+import TextButton from '@/components/buttons/TextButton';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import PrimaryLink from '@/components/links/PrimaryLink';
@@ -12,15 +22,17 @@ import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 import Skeleton from '@/components/Skeleton';
 
-import { useHeader } from '@/store/app';
+import { appStore, useHeader } from '@/store/app';
 
 import MainLayout from '@/layouts/MainLayout';
 
-type Color = typeof colorList[number];
+type Color = (typeof colorList)[number];
 
 export default function ComponentsPage() {
   useHeader();
   const [color, setColor] = React.useState<Color>('sky');
+
+  const textColor = appStore.darkMode ? 'text-gray-300' : 'text-gray-600';
 
   return (
     <MainLayout>
@@ -217,6 +229,104 @@ export default function ComponentsPage() {
                   <Button variant='light'>Light Variant</Button>
                 </div>
                 <div className='flex flex-wrap gap-2'>
+                  <Button
+                    variant='primary'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    variant='outline'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    variant='ghost'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    variant='dark'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    variant='light'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                </div>
+                <div className='!mt-4 flex flex-wrap gap-2'>
+                  <Button size='sm' variant='primary'>
+                    Small Size
+                  </Button>
+                  <Button size='sm' variant='outline'>
+                    Small Size
+                  </Button>
+                  <Button size='sm' variant='ghost'>
+                    Small Size
+                  </Button>
+                  <Button size='sm' variant='dark'>
+                    Small Size
+                  </Button>
+                  <Button size='sm' variant='light'>
+                    Small Size
+                  </Button>
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  <Button
+                    size='sm'
+                    variant='primary'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    size='sm'
+                    variant='outline'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    size='sm'
+                    variant='ghost'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+
+                  <Button
+                    size='sm'
+                    variant='dark'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    size='sm'
+                    variant='light'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                </div>
+
+                <div className='!mt-4 flex flex-wrap gap-2'>
                   <Button disabled variant='primary'>
                     Disabled
                   </Button>
@@ -252,8 +362,36 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h3>Custom 404 Page</h3>
-                <p>Styled 404 page with some animation.</p>
+                <h2 className='md:text-xl text-lg'>TextButton</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Button with a text style
+                </p>
+                <div className='space-x-2'>
+                  <TextButton>Primary Variant</TextButton>
+                  <TextButton variant='basic'>Basic Variant</TextButton>
+                </div>
+              </li>
+              <li className='space-y-2'>
+                <h2 className='md:text-xl text-lg'>IconButton</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Button with only icon inside
+                </p>
+                <div className='space-x-2'>
+                  <IconButton icon={HiPlus} />
+                  <IconButton
+                    variant='outline'
+                    icon={HiOutlineDesktopComputer}
+                  />
+                  <IconButton variant='ghost' icon={HiOutlineDeviceMobile} />
+                  <IconButton variant='dark' icon={HiOutlineShieldCheck} />
+                  <IconButton variant='light' icon={HiOutlineCreditCard} />
+                </div>
+              </li>
+              <li className='space-y-2'>
+                <h2 className='md:text-xl text-lg'>Custom 404 Page</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Styled 404 page with some animation.
+                </p>
                 <div className='flex flex-wrap gap-2'>
                   <ButtonLink href='/404'>Visit the 404 page</ButtonLink>
                 </div>
@@ -264,7 +402,7 @@ export default function ComponentsPage() {
                 <NextImage
                   useSkeleton
                   className='md:w-40 w-32'
-                  src='/favicon/apple-icon-180x180.png'
+                  src='/favicon/android-chrome-192x192.png'
                   width='180'
                   height='180'
                   alt='Icon'
