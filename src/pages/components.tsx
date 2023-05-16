@@ -113,6 +113,9 @@ export default function ComponentsPage() {
                   <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-900 text-white'>
                     900
                   </div>
+                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-950 text-white'>
+                    950
+                  </div>
                 </div>
               </li>
               <li className='space-y-2'>
@@ -422,28 +425,28 @@ export default function ComponentsPage() {
 }
 
 const colorList = [
-  'rose',
-  'pink',
-  'fuchsia',
-  'purple',
-  'violet',
-  'indigo',
-  'blue',
-  'sky',
-  'cyan',
-  'teal',
-  'emerald',
-  'green',
-  'lime',
-  'yellow',
-  'amber',
-  'orange',
-  'red',
   'slate',
   'gray',
   'zinc',
   'neutral',
   'stone',
+  'red',
+  'orange',
+  'amber',
+  'yellow',
+  'lime',
+  'green',
+  'emerald',
+  'teal',
+  'cyan',
+  'sky',
+  'blue',
+  'indigo',
+  'violet',
+  'purple',
+  'fuchsia',
+  'pink',
+  'rose',
 ] as const;
 
 export function getStaticProps() {
